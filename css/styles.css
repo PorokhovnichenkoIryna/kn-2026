@@ -1,13 +1,25 @@
+
 body {
-    background-color: #f8f9fa;
-    font-family: 'Montserrat', sans-serif;
+    height: 100%;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.portfolio-container {
+    flex: 1;
+    padding: 60px 20px;
 }
 
 .topbar {
     background-color: rgb(88, 88, 88);
     width: 100%;
     height: 120px;
+    justify-content: center;
 }
 
 .topbar ul {
@@ -59,8 +71,7 @@ h1 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     width: 220px;
     text-align: center;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
+    transition: 0.3s;
 }
 
 .student:hover {
@@ -69,29 +80,52 @@ h1 {
 }
 
 .student img {
-    width: 160px !important;
-    height: 160px !important;
-    object-fit: cover; 
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: 50%;
     border: 5px solid #e0ebfe;
     margin-bottom: 20px;
-    display: inline-block;
 }
 
 .student p {
-    margin: 15px 0 0;
+    margin: 0;
     font-size: 17px;
     font-weight: 700;
     color: #161d2a;
-    line-height: 1.3;
 }
 
 .student a {
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 
 .student a:hover p {
     color: #2979ff;
+}
+
+
+footer {
+    background: #3e2890;
+    color: #fff;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #2979ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
