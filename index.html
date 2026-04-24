@@ -6,6 +6,17 @@
     <title>Портфоліо 2026 ІнЗП</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <script>
+        async function loadGitHubInfo(username) {
+            const response = await fetch(`https://api.github.com/users/${username}`);
+            const data = await response.json();
+
+            document.getElementById(`${username}-bio`).innerText = data.bio || 'Не додана біографія';
+            document.getElementById(`${username}-repos`).innerText = data.public_repos + ' репозиторіїв';
+            document.getElementById(`${username}-followers`).innerText = data.followers + ' підписників';
+        } 
+        loadGitHubInfo('PorokhovnichenkoIryna');
+	</script>
 </head>
 <body>
 
@@ -27,6 +38,17 @@
         </section>
         
         <div class="students-grid">
+            <div class="student">
+                <a href="https://github.com/PorokhovnichenkoIryna">
+                   <div class="img-container">
+                      <img src="" alt="Тут мала бути аватарка">
+                   </div>
+                    <p>Iryna Porokhovnichenko</p>
+                </a>
+                <p id="PorokhovnichenkoIryna-bio"></p>
+                <p id="PorokhovnichenkoIryna-repos"></p>
+                <p id="PorokhovnichenkoIryna-followers"></p>
+            </div>
             <div class="student">
                 <a href="https://github.com/Arteti1">
                     <div class="img-container">
