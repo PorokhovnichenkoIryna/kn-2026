@@ -12,7 +12,7 @@
             const data = await response.json();
 
             document.getElementById(`${username}-bio`).innerText = data.bio || 'Не додана біографія';
-            document.getElementById(`${username}-repos`).innerText = data.public_repos + ' репозиторіїв';
+            document.getElementById(`${username}-repos`).innerText = data.public_repos === 1 ? '1 репозиторій' : data.public_repos + ' репозиторіїв';
             document.getElementById(`${username}-followers`).innerText = data.followers + ' підписників';
         } 
 
